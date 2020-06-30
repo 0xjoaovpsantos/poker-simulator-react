@@ -22,7 +22,8 @@ export function getWinner(
     alert('primeira mao sequencia');
   } else if (verifyTrinca(firstHand)) {
     alert('primeira mao trinca');
-  } else {
+  } else if (verifyTwoPairs(firstHand)) {
+    alert('primeira mao two pairs');
   }
 }
 
@@ -71,6 +72,17 @@ export function verifySequence(deckCards: deckCardsProps[]): boolean {
 
 export function verifyTrinca(deckCards: deckCardsProps[]): boolean {
   if (verifyCardsSameValue(deckCards, 3)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export function verifyTwoPairs(deckCards: deckCardsProps[]): boolean {
+  if (
+    verifyCardsSameValue(deckCards, 2) &&
+    verifyCardsSameValue(deckCards, 2)
+  ) {
     return true;
   } else {
     return false;
