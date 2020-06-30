@@ -4,12 +4,16 @@ import { Container, Deck } from './styles';
 
 import deckCards from '../../utils/deckCards';
 
+import { getWinner } from '../../utils/getWinner';
+
 import Card from '../../components/Card';
 
 interface deckCardsProps {
   id: number;
   icon: string;
   description: string;
+  naipe?: string;
+  value: string;
 }
 
 const Home: React.FC = () => {
@@ -34,7 +38,7 @@ const Home: React.FC = () => {
         setSecondHand([...secondHand, cardSelected]);
       }
     } else {
-      alert('ja foi');
+      getWinner(firstHand, secondHand);
     }
   }
 
@@ -49,7 +53,7 @@ const Home: React.FC = () => {
                 id={copa.id}
                 icon={copa.icon}
                 description={copa.description}
-                click={() => addCard(copa)}
+                click={() => addCard({ ...copa, naipe: deckCards[0].name })}
               />
             ))}
           </div>
@@ -59,7 +63,7 @@ const Home: React.FC = () => {
                 id={espada.id}
                 icon={espada.icon}
                 description={espada.description}
-                click={() => addCard(espada)}
+                click={() => addCard({ ...espada, naipe: deckCards[1].name })}
               />
             ))}
           </div>
@@ -69,7 +73,7 @@ const Home: React.FC = () => {
                 id={ouro.id}
                 icon={ouro.icon}
                 description={ouro.description}
-                click={() => addCard(ouro)}
+                click={() => addCard({ ...ouro, naipe: deckCards[2].name })}
               />
             ))}
           </div>
@@ -79,7 +83,7 @@ const Home: React.FC = () => {
                 id={pau.id}
                 icon={pau.icon}
                 description={pau.description}
-                click={() => addCard(pau)}
+                click={() => addCard({ ...pau, naipe: deckCards[3].name })}
               />
             ))}
           </div>
