@@ -13,6 +13,31 @@ interface deckCardsProps {
 }
 
 const Home: React.FC = () => {
+  const [firstHand, setFirstHand] = useState<deckCardsProps[]>([]);
+  const [secondHand, setSecondHand] = useState<deckCardsProps[]>([]);
+
+  function addCard(cardSelected: deckCardsProps) {
+    if (firstHand.length < 5) {
+      const index = firstHand.findIndex((card) => card.id === cardSelected.id);
+
+      if (index !== -1) {
+        setFirstHand(firstHand.filter((card) => card.id !== cardSelected.id));
+      } else {
+        setFirstHand([...firstHand, cardSelected]);
+      }
+    } else if (secondHand.length < 5) {
+      const index = secondHand.findIndex((card) => card.id === cardSelected.id);
+
+      if (index !== -1) {
+        setSecondHand(secondHand.filter((card) => card.id !== cardSelected.id));
+      } else {
+        setSecondHand([...secondHand, cardSelected]);
+      }
+    } else {
+      alert('ja foi');
+    }
+  }
+
   return (
     <>
       <Container>
@@ -24,6 +49,7 @@ const Home: React.FC = () => {
                 id={copa.id}
                 icon={copa.icon}
                 description={copa.description}
+                click={() => addCard(copa)}
               />
             ))}
           </div>
@@ -33,6 +59,7 @@ const Home: React.FC = () => {
                 id={espada.id}
                 icon={espada.icon}
                 description={espada.description}
+                click={() => addCard(espada)}
               />
             ))}
           </div>
@@ -42,15 +69,41 @@ const Home: React.FC = () => {
                 id={ouro.id}
                 icon={ouro.icon}
                 description={ouro.description}
+                click={() => addCard(ouro)}
               />
             ))}
           </div>
           <div>
             {deckCards[3].cards.map((pau) => (
-              <Card id={pau.id} icon={pau.icon} description={pau.description} />
+              <Card
+                id={pau.id}
+                icon={pau.icon}
+                description={pau.description}
+                click={() => addCard(pau)}
+              />
             ))}
           </div>
         </Deck>
+        <div>
+          {firstHand.map((card) => (
+            <Card
+              id={card.id}
+              icon={card.icon}
+              description={card.description}
+              click={() => {}}
+            />
+          ))}
+        </div>
+        <div>
+          {secondHand.map((card) => (
+            <Card
+              id={card.id}
+              icon={card.icon}
+              description={card.description}
+              click={() => {}}
+            />
+          ))}
+        </div>
       </Container>
     </>
   );
