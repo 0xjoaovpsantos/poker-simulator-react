@@ -18,13 +18,15 @@ export function getWinner(
     alert('primeira mao full house');
   } else if (verifyFlush(firstHand)) {
     alert('primeira mao flush');
+  } else if (verifySequence(firstHand)) {
+    alert('primeira mao sequencia');
   } else {
-    alert('nem flush');
+    alert('nem sequencia');
   }
 }
 
 export function verifyStraightFlush(deckCards: deckCardsProps[]): boolean {
-  if (verifySameNaipe(deckCards) && verifyNumericalOrder(deckCards)) {
+  if (verifySameNaipe(deckCards) && verifyNumericalOrderSameNaipe(deckCards)) {
     return true;
   } else {
     return false;
@@ -55,6 +57,14 @@ export function verifyFlush(deckCards: deckCardsProps[]): boolean {
   }
 }
 
+export function verifySequence(deckCards: deckCardsProps[]): boolean {
+  if (verifyNumericalOrder(deckCards)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 export function verifySameNaipe(deckCards: deckCardsProps[]): boolean {
   let naipeDeck;
   let sameNaipe = true;
@@ -73,7 +83,9 @@ export function verifySameNaipe(deckCards: deckCardsProps[]): boolean {
   return sameNaipe;
 }
 
-export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
+export function verifyNumericalOrderSameNaipe(
+  deckCards: deckCardsProps[],
+): boolean {
   deckCards.sort(function (a, b) {
     if (a.id > b.id) {
       return 1;
@@ -118,4 +130,40 @@ export function verifyCardsSameValue(
     }
   }
   return false;
+}
+
+export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
+  for (let i = 0; i < deckCards.length; i++) {
+    if (
+      deckCards[i].value == 'A' ||
+      deckCards[i].value == 'J' ||
+      deckCards[i].value == 'Q' ||
+      deckCards[i].value == 'K'
+    ) {
+      return false;
+    }
+  }
+
+  deckCards.sort(function (a, b) {
+    if (Number(a.value) > Number(b.value)) {
+      return 1;
+    }
+
+    if (Number(a.value) < Number(b.value)) {
+      return -1;
+    }
+
+    return 0;
+  });
+
+  if (
+    Number(deckCards[1].value) - Number(deckCards[0].value) != 1 ||
+    Number(deckCards[2].value) - Number(deckCards[1].value) != 1 ||
+    Number(deckCards[3].value) - Number(deckCards[2].value) != 1 ||
+    Number(deckCards[4].value) - Number(deckCards[3].value) != 1
+  ) {
+    return false;
+  } else {
+    return true;
+  }
 }
