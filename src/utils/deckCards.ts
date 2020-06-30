@@ -56,263 +56,283 @@ import paus_k from '../assets/paus/paus_a.png';
 
 export default [
   {
-    id: 0,
-    icon: copas_a,
-    description: 'copas_a',
+    name: 'copas',
+    cards: [
+      {
+        id: 0,
+        icon: copas_a,
+        description: 'copas_a',
+      },
+      {
+        id: 1,
+        icon: copas_2,
+        description: 'copas_2',
+      },
+      {
+        id: 2,
+        icon: copas_3,
+        description: 'copas_3',
+      },
+      {
+        id: 3,
+        icon: copas_4,
+        description: 'copas_4',
+      },
+      {
+        id: 4,
+        icon: copas_5,
+        description: 'copas_5',
+      },
+      {
+        id: 5,
+        icon: copas_6,
+        description: 'copas_6',
+      },
+      {
+        id: 6,
+        icon: copas_7,
+        description: 'copas_7',
+      },
+      {
+        id: 7,
+        icon: copas_8,
+        description: 'copas_8',
+      },
+      {
+        id: 8,
+        icon: copas_9,
+        description: 'copas_9',
+      },
+      {
+        id: 9,
+        icon: copas_10,
+        description: 'copas_10',
+      },
+      {
+        id: 10,
+        icon: copas_j,
+        description: 'copas_j',
+      },
+      {
+        id: 11,
+        icon: copas_q,
+        description: 'copas_q',
+      },
+      {
+        id: 12,
+        icon: copas_k,
+        description: 'copas_k',
+      },
+    ],
   },
   {
-    id: 1,
-    icon: copas_2,
-    description: 'copas_2',
+    name: 'espadas',
+    cards: [
+      {
+        id: 13,
+        icon: espadas_a,
+        description: 'espadas_a',
+      },
+      {
+        id: 14,
+        icon: espadas_2,
+        description: 'espadas_2',
+      },
+      {
+        id: 15,
+        icon: espadas_3,
+        description: 'espadas_3',
+      },
+      {
+        id: 16,
+        icon: espadas_4,
+        description: 'espadas_4',
+      },
+      {
+        id: 17,
+        icon: espadas_5,
+        description: 'espadas_5',
+      },
+      {
+        id: 18,
+        icon: espadas_6,
+        description: 'espadas_6',
+      },
+      {
+        id: 19,
+        icon: espadas_7,
+        description: 'espadas_7',
+      },
+      {
+        id: 20,
+        icon: espadas_8,
+        description: 'espadas_8',
+      },
+      {
+        id: 21,
+        icon: espadas_9,
+        description: 'espadas_9',
+      },
+      {
+        id: 22,
+        icon: espadas_10,
+        description: 'espadas_10',
+      },
+      {
+        id: 23,
+        icon: espadas_j,
+        description: 'espadas_j',
+      },
+      {
+        id: 24,
+        icon: espadas_q,
+        description: 'espadas_q',
+      },
+      {
+        id: 25,
+        icon: espadas_k,
+        description: 'espadas_k',
+      },
+    ],
   },
   {
-    id: 2,
-    icon: copas_3,
-    description: 'copas_3',
+    name: 'ouros',
+    cards: [
+      {
+        id: 26,
+        icon: ouros_a,
+        description: 'ouros_a',
+      },
+      {
+        id: 27,
+        icon: ouros_2,
+        description: 'ouros_2',
+      },
+      {
+        id: 28,
+        icon: ouros_3,
+        description: 'ouros_3',
+      },
+      {
+        id: 29,
+        icon: ouros_4,
+        description: 'ouros_4',
+      },
+      {
+        id: 30,
+        icon: ouros_5,
+        description: 'ouros_5',
+      },
+      {
+        id: 31,
+        icon: ouros_6,
+        description: 'ouros_6',
+      },
+      {
+        id: 32,
+        icon: ouros_7,
+        description: 'ouros_7',
+      },
+      {
+        id: 33,
+        icon: ouros_8,
+        description: 'ouros_8',
+      },
+      {
+        id: 34,
+        icon: ouros_9,
+        description: 'ouros_9',
+      },
+      {
+        id: 35,
+        icon: ouros_10,
+        description: 'ouros_10',
+      },
+      {
+        id: 36,
+        icon: ouros_j,
+        description: 'ouros_j',
+      },
+      {
+        id: 37,
+        icon: ouros_q,
+        description: 'ouros_q',
+      },
+      {
+        id: 38,
+        icon: ouros_k,
+        description: 'ouros_k',
+      },
+    ],
   },
   {
-    id: 3,
-    icon: copas_4,
-    description: 'copas_4',
-  },
-  {
-    id: 4,
-    icon: copas_5,
-    description: 'copas_5',
-  },
-  {
-    id: 5,
-    icon: copas_6,
-    description: 'copas_6',
-  },
-  {
-    id: 6,
-    icon: copas_7,
-    description: 'copas_7',
-  },
-  {
-    id: 7,
-    icon: copas_8,
-    description: 'copas_8',
-  },
-  {
-    id: 8,
-    icon: copas_9,
-    description: 'copas_9',
-  },
-  {
-    id: 9,
-    icon: copas_10,
-    description: 'copas_10',
-  },
-  {
-    id: 10,
-    icon: copas_j,
-    description: 'copas_j',
-  },
-  {
-    id: 11,
-    icon: copas_q,
-    description: 'copas_q',
-  },
-  {
-    id: 12,
-    icon: copas_k,
-    description: 'copas_k',
-  },
-  {
-    id: 13,
-    icon: espadas_a,
-    description: 'espadas_a',
-  },
-  {
-    id: 14,
-    icon: espadas_2,
-    description: 'espadas_2',
-  },
-  {
-    id: 15,
-    icon: espadas_3,
-    description: 'espadas_3',
-  },
-  {
-    id: 16,
-    icon: espadas_4,
-    description: 'espadas_4',
-  },
-  {
-    id: 17,
-    icon: espadas_5,
-    description: 'espadas_5',
-  },
-  {
-    id: 18,
-    icon: espadas_6,
-    description: 'espadas_6',
-  },
-  {
-    id: 19,
-    icon: espadas_7,
-    description: 'espadas_7',
-  },
-  {
-    id: 20,
-    icon: espadas_8,
-    description: 'espadas_8',
-  },
-  {
-    id: 21,
-    icon: espadas_9,
-    description: 'espadas_9',
-  },
-  {
-    id: 22,
-    icon: espadas_10,
-    description: 'espadas_10',
-  },
-  {
-    id: 23,
-    icon: espadas_j,
-    description: 'espadas_j',
-  },
-  {
-    id: 24,
-    icon: espadas_q,
-    description: 'espadas_q',
-  },
-  {
-    id: 25,
-    icon: espadas_k,
-    description: 'espadas_k',
-  },
-  {
-    id: 26,
-    icon: ouros_a,
-    description: 'ouros_a',
-  },
-  {
-    id: 27,
-    icon: ouros_2,
-    description: 'ouros_2',
-  },
-  {
-    id: 28,
-    icon: ouros_3,
-    description: 'ouros_3',
-  },
-  {
-    id: 29,
-    icon: ouros_4,
-    description: 'ouros_4',
-  },
-  {
-    id: 30,
-    icon: ouros_5,
-    description: 'ouros_5',
-  },
-  {
-    id: 31,
-    icon: ouros_6,
-    description: 'ouros_6',
-  },
-  {
-    id: 32,
-    icon: ouros_7,
-    description: 'ouros_7',
-  },
-  {
-    id: 33,
-    icon: ouros_8,
-    description: 'ouros_8',
-  },
-  {
-    id: 34,
-    icon: ouros_9,
-    description: 'ouros_9',
-  },
-  {
-    id: 35,
-    icon: ouros_10,
-    description: 'ouros_10',
-  },
-  {
-    id: 36,
-    icon: ouros_j,
-    description: 'ouros_j',
-  },
-  {
-    id: 37,
-    icon: ouros_q,
-    description: 'ouros_q',
-  },
-  {
-    id: 38,
-    icon: ouros_k,
-    description: 'ouros_k',
-  },
-  {
-    id: 39,
-    icon: paus_a,
-    description: 'paus_a',
-  },
-  {
-    id: 40,
-    icon: paus_2,
-    description: 'paus_2',
-  },
-  {
-    id: 41,
-    icon: paus_3,
-    description: 'paus_3',
-  },
-  {
-    id: 42,
-    icon: paus_4,
-    description: 'paus_4',
-  },
-  {
-    id: 43,
-    icon: paus_5,
-    description: 'paus_5',
-  },
-  {
-    id: 44,
-    icon: paus_6,
-    description: 'paus_6',
-  },
-  {
-    id: 45,
-    icon: paus_7,
-    description: 'paus_7',
-  },
-  {
-    id: 46,
-    icon: paus_8,
-    description: 'paus_8',
-  },
-  {
-    id: 47,
-    icon: paus_9,
-    description: 'paus_9',
-  },
-  {
-    id: 48,
-    icon: paus_10,
-    description: 'paus_10',
-  },
-  {
-    id: 49,
-    icon: paus_j,
-    description: 'paus_j',
-  },
-  {
-    id: 50,
-    icon: paus_q,
-    description: 'paus_q',
-  },
-  {
-    id: 51,
-    icon: paus_k,
-    description: 'paus_k',
+    name: 'paus',
+    cards: [
+      {
+        id: 39,
+        icon: paus_a,
+        description: 'paus_a',
+      },
+      {
+        id: 40,
+        icon: paus_2,
+        description: 'paus_2',
+      },
+      {
+        id: 41,
+        icon: paus_3,
+        description: 'paus_3',
+      },
+      {
+        id: 42,
+        icon: paus_4,
+        description: 'paus_4',
+      },
+      {
+        id: 43,
+        icon: paus_5,
+        description: 'paus_5',
+      },
+      {
+        id: 44,
+        icon: paus_6,
+        description: 'paus_6',
+      },
+      {
+        id: 45,
+        icon: paus_7,
+        description: 'paus_7',
+      },
+      {
+        id: 46,
+        icon: paus_8,
+        description: 'paus_8',
+      },
+      {
+        id: 47,
+        icon: paus_9,
+        description: 'paus_9',
+      },
+      {
+        id: 48,
+        icon: paus_10,
+        description: 'paus_10',
+      },
+      {
+        id: 49,
+        icon: paus_j,
+        description: 'paus_j',
+      },
+      {
+        id: 50,
+        icon: paus_q,
+        description: 'paus_q',
+      },
+      {
+        id: 51,
+        icon: paus_k,
+        description: 'paus_k',
+      },
+    ],
   },
 ];
