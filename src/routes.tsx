@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import App from './App';
+import Home from './pages/Home';
 
 const Routes: React.FC = () => (
   <BrowserRouter>
-    <Route component={App} path="/" />
+    <Route component={Home} path="/" />
   </BrowserRouter>
 );
 
