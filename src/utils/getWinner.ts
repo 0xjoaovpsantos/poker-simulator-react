@@ -16,8 +16,10 @@ export function getWinner(
     alert('primeira mao quadra');
   } else if (verifyFullHouse(firstHand)) {
     alert('primeira mao full house');
+  } else if (verifyFlush(firstHand)) {
+    alert('primeira mao flush');
   } else {
-    alert('nem full house');
+    alert('nem flush');
   }
 }
 
@@ -39,6 +41,14 @@ export function verifyQuadra(deckCards: deckCardsProps[]): boolean {
 
 export function verifyFullHouse(deckCards: deckCardsProps[]): boolean {
   if (verifyCardsSameValue(deckCards, 3)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export function verifyFlush(deckCards: deckCardsProps[]): boolean {
+  if (verifySameNaipe(deckCards)) {
     return true;
   } else {
     return false;
@@ -83,10 +93,8 @@ export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
     deckCards[4].id - deckCards[3].id != 1
   ) {
     console.log(deckCards);
-    alert('nao ta na ordem');
     return false;
   } else {
-    alert('ta na ordem');
     return true;
   }
 }
