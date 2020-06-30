@@ -14,14 +14,15 @@ export function getWinner(
     alert('primeira mao staright flush');
   } else if (verifyQuadra(firstHand)) {
     alert('primeira mao quadra');
-  } else if (verifyFullHouse(firstHand)) {
-    alert('primeira mao full house');
+    //} else if (verifyFullHouse(firstHand)) {
+    // alert('primeira mao full house');
   } else if (verifyFlush(firstHand)) {
     alert('primeira mao flush');
   } else if (verifySequence(firstHand)) {
     alert('primeira mao sequencia');
+  } else if (verifyTrinca(firstHand)) {
+    alert('primeira mao trinca');
   } else {
-    alert('nem sequencia');
   }
 }
 
@@ -59,6 +60,14 @@ export function verifyFlush(deckCards: deckCardsProps[]): boolean {
 
 export function verifySequence(deckCards: deckCardsProps[]): boolean {
   if (verifyNumericalOrder(deckCards)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export function verifyTrinca(deckCards: deckCardsProps[]): boolean {
+  if (verifyCardsSameValue(deckCards, 3)) {
     return true;
   } else {
     return false;
