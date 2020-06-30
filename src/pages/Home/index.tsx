@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Container, Deck } from './styles';
+
 import copas_a from '../../assets/copas/copas_a.png';
 import copas_2 from '../../assets/copas/copas_2.png';
 import copas_3 from '../../assets/copas/copas_3.png';
@@ -58,61 +60,70 @@ import paus_k from '../../assets/paus/paus_a.png';
 
 const Home: React.FC = () => (
   <>
-    <img src={copas_a} alt="Cartas Copas A" />
-    <img src={copas_2} alt="Cartas Copas 2" />
-    <img src={copas_3} alt="Cartas Copas 3" />
-    <img src={copas_4} alt="Cartas Copas 4" />
-    <img src={copas_5} alt="Cartas Copas 5" />
-    <img src={copas_6} alt="Cartas Copas 6" />
-    <img src={copas_7} alt="Cartas Copas 7" />
-    <img src={copas_8} alt="Cartas Copas 8" />
-    <img src={copas_9} alt="Cartas Copas 9" />
-    <img src={copas_10} alt="Cartas Copas 10" />
-    <img src={copas_j} alt="Cartas Copas J" />
-    <img src={copas_q} alt="Cartas Copas Q" />
-    <img src={copas_k} alt="Cartas Copas K" />
-
-    <img src={espadas_a} alt="Cartas espadas A" />
-    <img src={espadas_2} alt="Cartas espadas 2" />
-    <img src={espadas_3} alt="Cartas espadas 3" />
-    <img src={espadas_4} alt="Cartas espadas 4" />
-    <img src={espadas_5} alt="Cartas espadas 5" />
-    <img src={espadas_6} alt="Cartas espadas 6" />
-    <img src={espadas_7} alt="Cartas espadas 7" />
-    <img src={espadas_8} alt="Cartas espadas 8" />
-    <img src={espadas_9} alt="Cartas espadas 9" />
-    <img src={espadas_10} alt="Cartas espadas 10" />
-    <img src={espadas_j} alt="Cartas espadas J" />
-    <img src={espadas_q} alt="Cartas espadas Q" />
-    <img src={espadas_k} alt="Cartas espadas K" />
-
-    <img src={ouros_a} alt="Cartas ouros A" />
-    <img src={ouros_2} alt="Cartas ouros 2" />
-    <img src={ouros_3} alt="Cartas ouros 3" />
-    <img src={ouros_4} alt="Cartas ouros 4" />
-    <img src={ouros_5} alt="Cartas ouros 5" />
-    <img src={ouros_6} alt="Cartas ouros 6" />
-    <img src={ouros_7} alt="Cartas ouros 7" />
-    <img src={ouros_8} alt="Cartas ouros 8" />
-    <img src={ouros_9} alt="Cartas ouros 9" />
-    <img src={ouros_10} alt="Cartas ouros 10" />
-    <img src={ouros_j} alt="Cartas ouros J" />
-    <img src={ouros_q} alt="Cartas ouros Q" />
-    <img src={ouros_k} alt="Cartas ouros K" />
-
-    <img src={paus_a} alt="Cartas paus A" />
-    <img src={paus_2} alt="Cartas paus 2" />
-    <img src={paus_3} alt="Cartas paus 3" />
-    <img src={paus_4} alt="Cartas paus 4" />
-    <img src={paus_5} alt="Cartas paus 5" />
-    <img src={paus_6} alt="Cartas paus 6" />
-    <img src={paus_7} alt="Cartas paus 7" />
-    <img src={paus_8} alt="Cartas paus 8" />
-    <img src={paus_9} alt="Cartas paus 9" />
-    <img src={paus_10} alt="Cartas paus 10" />
-    <img src={paus_j} alt="Cartas paus J" />
-    <img src={paus_q} alt="Cartas paus Q" />
-    <img src={paus_k} alt="Cartas paus K" />
+    <Container>
+      <Deck>
+        <div>
+          <img src={copas_a} alt="Cartas Copas A" />
+          <img src={copas_2} alt="Cartas Copas 2" />
+          <img src={copas_3} alt="Cartas Copas 3" />
+          <img src={copas_4} alt="Cartas Copas 4" />
+          <img src={copas_5} alt="Cartas Copas 5" />
+          <img src={copas_6} alt="Cartas Copas 6" />
+          <img src={copas_7} alt="Cartas Copas 7" />
+          <img src={copas_8} alt="Cartas Copas 8" />
+          <img src={copas_9} alt="Cartas Copas 9" />
+          <img src={copas_10} alt="Cartas Copas 10" />
+          <img src={copas_j} alt="Cartas Copas J" />
+          <img src={copas_q} alt="Cartas Copas Q" />
+          <img src={copas_k} alt="Cartas Copas K" />
+        </div>
+        <div>
+          <img src={espadas_a} alt="Cartas espadas A" />
+          <img src={espadas_2} alt="Cartas espadas 2" />
+          <img src={espadas_3} alt="Cartas espadas 3" />
+          <img src={espadas_4} alt="Cartas espadas 4" />
+          <img src={espadas_5} alt="Cartas espadas 5" />
+          <img src={espadas_6} alt="Cartas espadas 6" />
+          <img src={espadas_7} alt="Cartas espadas 7" />
+          <img src={espadas_8} alt="Cartas espadas 8" />
+          <img src={espadas_9} alt="Cartas espadas 9" />
+          <img src={espadas_10} alt="Cartas espadas 10" />
+          <img src={espadas_j} alt="Cartas espadas J" />
+          <img src={espadas_q} alt="Cartas espadas Q" />
+          <img src={espadas_k} alt="Cartas espadas K" />
+        </div>
+        <div>
+          <img src={ouros_a} alt="Cartas ouros A" />
+          <img src={ouros_2} alt="Cartas ouros 2" />
+          <img src={ouros_3} alt="Cartas ouros 3" />
+          <img src={ouros_4} alt="Cartas ouros 4" />
+          <img src={ouros_5} alt="Cartas ouros 5" />
+          <img src={ouros_6} alt="Cartas ouros 6" />
+          <img src={ouros_7} alt="Cartas ouros 7" />
+          <img src={ouros_8} alt="Cartas ouros 8" />
+          <img src={ouros_9} alt="Cartas ouros 9" />
+          <img src={ouros_10} alt="Cartas ouros 10" />
+          <img src={ouros_j} alt="Cartas ouros J" />
+          <img src={ouros_q} alt="Cartas ouros Q" />
+          <img src={ouros_k} alt="Cartas ouros K" />
+        </div>
+        <div>
+          <img src={paus_a} alt="Cartas paus A" />
+          <img src={paus_2} alt="Cartas paus 2" />
+          <img src={paus_3} alt="Cartas paus 3" />
+          <img src={paus_4} alt="Cartas paus 4" />
+          <img src={paus_5} alt="Cartas paus 5" />
+          <img src={paus_6} alt="Cartas paus 6" />
+          <img src={paus_7} alt="Cartas paus 7" />
+          <img src={paus_8} alt="Cartas paus 8" />
+          <img src={paus_9} alt="Cartas paus 9" />
+          <img src={paus_10} alt="Cartas paus 10" />
+          <img src={paus_j} alt="Cartas paus J" />
+          <img src={paus_q} alt="Cartas paus Q" />
+          <img src={paus_k} alt="Cartas paus K" />
+        </div>
+      </Deck>
+    </Container>
   </>
 );
 
