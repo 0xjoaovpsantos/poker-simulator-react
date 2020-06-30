@@ -28,6 +28,8 @@ export function getWinner(
     alert('primeira mao two pairs');
   } else if (verifyOnePair(firstHand)) {
     alert('primeira mao one pair');
+  } else {
+    alert('high letter');
   }
 }
 
