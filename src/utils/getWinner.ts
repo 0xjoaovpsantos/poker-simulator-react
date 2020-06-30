@@ -1,3 +1,5 @@
+import deckCards from './deckCards';
+
 interface deckCardsProps {
   id: number;
   icon: string;
@@ -24,6 +26,8 @@ export function getWinner(
     alert('primeira mao trinca');
   } else if (verifyTwoPairs(firstHand)) {
     alert('primeira mao two pairs');
+  } else if (verifyOnePair(firstHand)) {
+    alert('primeira mao one pair');
   }
 }
 
@@ -83,6 +87,14 @@ export function verifyTwoPairs(deckCards: deckCardsProps[]): boolean {
     verifyCardsSameValue(deckCards, 2) &&
     verifyCardsSameValue(deckCards, 2)
   ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
+  if (verifyCardsSameValue(deckCards, 2)) {
     return true;
   } else {
     return false;
