@@ -14,36 +14,27 @@ export function getWinner(
 ) {
   let first = verifyHand(firstHand);
   let second = verifyHand(secondHand);
+  let winner;
 
   if (first.id < second.id) {
-    return {
-      winner: 0,
-      first,
-      second,
-    };
+    winner = 0;
   } else if (first.id > second.id) {
-    return {
-      winner: 1,
-      first,
-      second,
-    };
+    winner = 1;
   } else {
     if (first.id == 0) {
-      let winner = tieStraightFlush(firstHand, secondHand);
-      return {
-        winner,
-        first,
-        second,
-      };
+      winner = tieStraightFlush(firstHand, secondHand);
     } else if (first.id == 1) {
-      let winner = tieQuadra(firstHand, secondHand);
-      return {
-        winner,
-        first,
-        second,
-      };
+      winner = tieQuadra(firstHand, secondHand);
+    } else if (first.id == 2) {
+      winner = tieFullHouse(firstHand, secondHand);
     }
   }
+
+  return {
+    winner,
+    first,
+    second,
+  };
 }
 
 export function verifyHand(hand: deckCardsProps[]) {
@@ -247,4 +238,22 @@ export function tieQuadra(
 
   if (higherValueFirstHand! > higherValueSecondHand!) return 0;
   else return 1;
+}
+
+export function tieFullHouse(
+  firstHand: deckCardsProps[],
+  secondHand: deckCardsProps[],
+) {
+  let higherValueFirstHand = MaximumValue(firstHand, 3);
+  let higherValueSecondHand = MaximumValue(secondHand, 3);
+
+  if (higherValueFirstHand! > higherValueSecondHand!) return 0;
+  else if (higherValueFirstHand! < higherValueSecondHand!) return 1;
+  else {
+    higherValueFirstHand = MaximumValue(firstHand, 2);
+    higherValueSecondHand = MaximumValue(secondHand, 2);
+
+    if (higherValueFirstHand! > higherValueSecondHand!) return 0;
+    else return 1;
+  }
 }
