@@ -96,7 +96,7 @@ export function verifyHand(hand: deckCardsProps[]) {
 }
 
 export function verifyStraightFlush(deckCards: deckCardsProps[]): boolean {
-  if (verifySameSuit(deckCards) && verifyNumericalOrderSameNaipe(deckCards)) {
+  if (verifySameSuit(deckCards) && verifyNumericalOrder(deckCards)) {
     return true;
   } else {
     return false;
@@ -168,33 +168,6 @@ export function verifySameSuit(deckCards: deckCardsProps[]): boolean {
     if (deckCards[i].naipe != naipe) return false;
   }
   return true;
-}
-
-export function verifyNumericalOrderSameNaipe(
-  deckCards: deckCardsProps[],
-): boolean {
-  deckCards.sort(function (a, b) {
-    if (a.id > b.id) {
-      return 1;
-    }
-
-    if (a.id < b.id) {
-      return -1;
-    }
-
-    return 0;
-  });
-  console.log(deckCards);
-  if (
-    deckCards[1].id - deckCards[0].id != 1 ||
-    deckCards[2].id - deckCards[1].id != 1 ||
-    deckCards[3].id - deckCards[2].id != 1 ||
-    deckCards[4].id - deckCards[3].id != 1
-  ) {
-    return false;
-  } else {
-    return true;
-  }
 }
 
 export function verifyCardsSameValue(
