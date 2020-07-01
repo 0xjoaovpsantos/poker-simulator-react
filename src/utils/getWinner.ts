@@ -40,52 +40,67 @@ export function getWinner(
 export function verifyHand(cardDeck: deckCardsProps[]) {
   let hand = verifyAsValue(cardDeck);
 
-  if (verifyStraightFlush(hand)) {
+  if (verifyRoyalFlush(hand)) {
     return {
       id: 0,
+      description: 'Royal Flush',
+    };
+  } else if (verifyStraightFlush(hand)) {
+    return {
+      id: 1,
       description: 'Straight Flush',
     };
   } else if (verifyQuadra(hand)) {
     return {
-      id: 1,
+      id: 2,
       description: 'Quadra',
     };
   } else if (verifyFullHouse(hand)) {
     return {
-      id: 2,
+      id: 3,
       description: 'Full House',
     };
   } else if (verifyFlush(hand)) {
     return {
-      id: 3,
+      id: 4,
       description: 'Flush',
     };
   } else if (verifySequence(hand)) {
     return {
-      id: 4,
+      id: 5,
       description: 'Sequência',
     };
   } else if (verifyTrinca(hand)) {
     return {
-      id: 5,
+      id: 6,
       description: 'Trinca',
     };
   } else if (verifyTwoPairs(hand)) {
     return {
-      id: 6,
+      id: 7,
       description: 'Dois Pares',
     };
   } else if (verifyOnePair(hand)) {
     return {
-      id: 7,
+      id: 8,
       description: 'Um Par',
     };
   } else {
     return {
-      id: 8,
+      id: 9,
       description: 'Carta Alta',
     };
   }
+}
+
+export function verifyRoyalFlush(deckCards: deckCardsProps[]): boolean {
+  if (
+    verifySameSuit(deckCards) &&
+    verifyNumericalOrder(deckCards) &&
+    deckCards[0].value === 10
+  )
+    return true;
+  else return false;
 }
 
 export function verifyStraightFlush(deckCards: deckCardsProps[]): boolean {
