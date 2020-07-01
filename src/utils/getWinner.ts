@@ -4,7 +4,7 @@ interface deckCardsProps {
   id: number;
   icon: string;
   description: string;
-  naipe?: string;
+  suit?: string;
   value: number;
 }
 
@@ -163,9 +163,9 @@ export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifySameSuit(deckCards: deckCardsProps[]): boolean {
-  let naipe = deckCards[0].naipe;
+  let suit = deckCards[0].suit;
   for (let i = 1; i < deckCards.length; i++) {
-    if (deckCards[i].naipe != naipe) return false;
+    if (deckCards[i].suit != suit) return false;
   }
   return true;
 }

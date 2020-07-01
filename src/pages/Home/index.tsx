@@ -12,7 +12,7 @@ interface deckCardsProps {
   id: number;
   icon: string;
   description: string;
-  naipe?: string;
+  suit?: string;
   value: number;
 }
 
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
                 id={copa.id}
                 icon={copa.icon}
                 description={copa.description}
-                click={() => addCard({ ...copa, naipe: deckCards[0].name })}
+                click={() => addCard({ ...copa, suit: deckCards[0].suit })}
               />
             ))}
           </div>
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                 id={espada.id}
                 icon={espada.icon}
                 description={espada.description}
-                click={() => addCard({ ...espada, naipe: deckCards[1].name })}
+                click={() => addCard({ ...espada, suit: deckCards[1].suit })}
               />
             ))}
           </div>
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
                 id={ouro.id}
                 icon={ouro.icon}
                 description={ouro.description}
-                click={() => addCard({ ...ouro, naipe: deckCards[2].name })}
+                click={() => addCard({ ...ouro, suit: deckCards[2].suit })}
               />
             ))}
           </div>
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                 id={pau.id}
                 icon={pau.icon}
                 description={pau.description}
-                click={() => addCard({ ...pau, naipe: deckCards[3].name })}
+                click={() => addCard({ ...pau, suit: deckCards[3].suit })}
               />
             ))}
           </div>

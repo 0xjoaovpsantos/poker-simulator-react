@@ -56,7 +56,7 @@ import paus_k from '../assets/paus/paus_a.png';
 
 export default [
   {
-    name: 'copas',
+    suit: 'copas',
     cards: [
       {
         id: 0,
@@ -139,7 +139,7 @@ export default [
     ],
   },
   {
-    name: 'espadas',
+    suit: 'espadas',
     cards: [
       {
         id: 13,
@@ -222,7 +222,7 @@ export default [
     ],
   },
   {
-    name: 'ouros',
+    suit: 'ouros',
     cards: [
       {
         id: 26,
@@ -305,7 +305,7 @@ export default [
     ],
   },
   {
-    name: 'paus',
+    suit: 'paus',
     cards: [
       {
         id: 39,
