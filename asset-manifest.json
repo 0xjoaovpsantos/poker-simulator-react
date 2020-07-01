@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/poker-simulator-react/static/js/main.eea7e661.chunk.js",
-    "main.js.map": "/poker-simulator-react/static/js/main.eea7e661.chunk.js.map",
-    "runtime-main.js": "/poker-simulator-react/static/js/runtime-main.6550f7a9.js",
-    "runtime-main.js.map": "/poker-simulator-react/static/js/runtime-main.6550f7a9.js.map",
-    "static/js/2.d34cb2d9.chunk.js": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js",
-    "static/js/2.d34cb2d9.chunk.js.map": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.map",
+    "main.js": "/poker-simulator-react/static/js/main.6cfe2567.chunk.js",
+    "main.js.map": "/poker-simulator-react/static/js/main.6cfe2567.chunk.js.map",
+    "runtime-main.js": "/poker-simulator-react/static/js/runtime-main.67794fdb.js",
+    "runtime-main.js.map": "/poker-simulator-react/static/js/runtime-main.67794fdb.js.map",
+    "static/js/2.12b660ec.chunk.js": "/poker-simulator-react/static/js/2.12b660ec.chunk.js",
+    "static/js/2.12b660ec.chunk.js.map": "/poker-simulator-react/static/js/2.12b660ec.chunk.js.map",
     "index.html": "/poker-simulator-react/index.html",
-    "precache-manifest.bba23c797e0bcb91528d11f915c63344.js": "/poker-simulator-react/precache-manifest.bba23c797e0bcb91528d11f915c63344.js",
+    "precache-manifest.23f193f4a4b6bbe1a4757a601458cebf.js": "/poker-simulator-react/precache-manifest.23f193f4a4b6bbe1a4757a601458cebf.js",
     "service-worker.js": "/poker-simulator-react/service-worker.js",
-    "static/js/2.d34cb2d9.chunk.js.LICENSE.txt": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.LICENSE.txt",
+    "static/js/2.12b660ec.chunk.js.LICENSE.txt": "/poker-simulator-react/static/js/2.12b660ec.chunk.js.LICENSE.txt",
     "static/media/background.png": "/poker-simulator-react/static/media/background.981ff59c.png",
     "static/media/paus_2.png": "/poker-simulator-react/static/media/paus_2.12aee8a9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6550f7a9.js",
-    "static/js/2.d34cb2d9.chunk.js",
-    "static/js/main.eea7e661.chunk.js"
+    "static/js/runtime-main.67794fdb.js",
+    "static/js/2.12b660ec.chunk.js",
+    "static/js/main.6cfe2567.chunk.js"
   ]
 }

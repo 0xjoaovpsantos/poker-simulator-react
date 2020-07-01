@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/poker-simulator-react/precache-manifest.bba23c797e0bcb91528d11f915c63344.js"
+  "/poker-simulator-react/precache-manifest.23f193f4a4b6bbe1a4757a601458cebf.js"
 );
 
 self.addEventListener('message', (event) => {

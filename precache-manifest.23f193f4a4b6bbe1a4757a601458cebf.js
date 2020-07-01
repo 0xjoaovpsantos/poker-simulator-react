@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0478faaa3b857132dcbaf25703c6a370",
+    "revision": "e9d1ec2bc6a55e9d34b8aa4320808a4f",
     "url": "/poker-simulator-react/index.html"
   },
   {
-    "revision": "23e622467bd1a682c14e",
-    "url": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js"
+    "revision": "e31f95ff63a46acfc09c",
+    "url": "/poker-simulator-react/static/js/2.12b660ec.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.LICENSE.txt"
+    "url": "/poker-simulator-react/static/js/2.12b660ec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f1ad0ccdf849343a5d5b",
-    "url": "/poker-simulator-react/static/js/main.eea7e661.chunk.js"
+    "revision": "5ff12c1d86dcd2c95df2",
+    "url": "/poker-simulator-react/static/js/main.6cfe2567.chunk.js"
   },
   {
-    "revision": "7db912740c4d3d0129c0",
-    "url": "/poker-simulator-react/static/js/runtime-main.6550f7a9.js"
+    "revision": "c645c5167dc1ccbffbac",
+    "url": "/poker-simulator-react/static/js/runtime-main.67794fdb.js"
   },
   {
     "revision": "981ff59c172bf05e9a606988718703e5",
