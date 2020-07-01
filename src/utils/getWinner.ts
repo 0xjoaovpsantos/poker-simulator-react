@@ -1,5 +1,3 @@
-import deckCards from './deckCards';
-
 interface deckCardsProps {
   id: number;
   icon: string;
@@ -21,11 +19,11 @@ export function getWinner(
   } else if (first.id > second.id) {
     winner = 1;
   } else {
-    if (first.id == 0) {
+    if (first.id === 0) {
       winner = tieStraightFlush(firstHand, secondHand);
-    } else if (first.id == 1) {
+    } else if (first.id === 1) {
       winner = tieQuadra(firstHand, secondHand);
-    } else if (first.id == 2) {
+    } else if (first.id === 2) {
       winner = tieFullHouse(firstHand, secondHand);
     }
   }
@@ -173,7 +171,7 @@ export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
 export function verifySameSuit(deckCards: deckCardsProps[]): boolean {
   let suit = deckCards[0].suit;
   for (let i = 1; i < deckCards.length; i++) {
-    if (deckCards[i].suit != suit) return false;
+    if (deckCards[i].suit !== suit) return false;
   }
   return true;
 }
@@ -191,9 +189,9 @@ export function verifyCardsSameValue(
       1 + (ocorrencias[deckCards[i].value] || 0);
 
   for (let i = 0; i < ocorrencias.length; i++)
-    if (ocorrencias[i] == numberOfRepetitions) quantityOfCards--;
+    if (ocorrencias[i] === numberOfRepetitions) quantityOfCards--;
 
-  if (quantityOfCards == 0) return true;
+  if (quantityOfCards === 0) return true;
   else return false;
 }
 
@@ -211,7 +209,7 @@ export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
   });
 
   for (let i = 0; i < deckCards.length - 1; i++) {
-    if (deckCards[i + 1].value - deckCards[i].value != 1) return false;
+    if (deckCards[i + 1].value - deckCards[i].value !== 1) return false;
   }
 
   return true;
@@ -230,7 +228,7 @@ export function MaximumValue(
 
   let higherNumber = 0;
   for (let i = 0; i < ocorrencias.length; i++)
-    if (ocorrencias[i] == numberOfRepetitions) higherNumber = i;
+    if (ocorrencias[i] === numberOfRepetitions) higherNumber = i;
 
   return higherNumber;
 }
@@ -279,12 +277,12 @@ export function tieFullHouse(
 export function verifyAsValue(deckCards: deckCardsProps[]) {
   let higherValue = -1;
   for (let i = 0; i < deckCards.length; i++)
-    if (deckCards[i].value > higherValue && deckCards[i].value != 14)
+    if (deckCards[i].value > higherValue && deckCards[i].value !== 14)
       higherValue = deckCards[i].value;
 
-  if (higherValue == 5)
+  if (higherValue === 5)
     for (let i = 0; i < deckCards.length; i++)
-      if (deckCards[i].value == 14) deckCards[i].value = 1;
+      if (deckCards[i].value === 14) deckCards[i].value = 1;
 
   return deckCards;
 }

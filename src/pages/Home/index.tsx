@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       const indexFirstHand = firstHand.findIndex(
         (card) => card.id === cardSelected.id,
       );
-      if (indexFirstHand != -1) {
+      if (indexFirstHand !== -1) {
         alert('Essa carta já foi escolhida na primeira mão!');
         return;
       }
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         setSecondHand(secondHand.filter((card) => card.id !== cardSelected.id));
       } else {
         setSecondHand([...secondHand, cardSelected]);
-        if (secondHand.length == 4) endGame();
+        if (secondHand.length === 4) endGame();
       }
     }
   }
@@ -55,9 +55,9 @@ const Home: React.FC = () => {
     let resultado = getWinner(firstHand, secondHand);
     setResultFirstHand(resultado!.first.description);
     setResultSecondHand(resultado!.second.description);
-    if (resultado!.winner == 0) {
+    if (resultado!.winner === 0) {
       setResultGame('A Primeira mão venceu!');
-    } else if (resultado!.winner == 1) {
+    } else if (resultado!.winner === 1) {
       setResultGame('A Segunda mão venceu!');
     } else {
       setResultGame('As duas mãos empataram');
@@ -82,41 +82,17 @@ const Home: React.FC = () => {
             mão!!!
           </p>
           <div>
-            {deckCards[0].cards.map((copa) => (
-              <Card
-                id={copa.id}
-                icon={copa.icon}
-                description={copa.description}
-                click={() => addCard({ ...copa, suit: deckCards[0].suit })}
-              />
-            ))}
-
-            {deckCards[1].cards.map((espada) => (
-              <Card
-                id={espada.id}
-                icon={espada.icon}
-                description={espada.description}
-                click={() => addCard({ ...espada, suit: deckCards[1].suit })}
-              />
-            ))}
-
-            {deckCards[2].cards.map((ouro) => (
-              <Card
-                id={ouro.id}
-                icon={ouro.icon}
-                description={ouro.description}
-                click={() => addCard({ ...ouro, suit: deckCards[2].suit })}
-              />
-            ))}
-
-            {deckCards[3].cards.map((pau) => (
-              <Card
-                id={pau.id}
-                icon={pau.icon}
-                description={pau.description}
-                click={() => addCard({ ...pau, suit: deckCards[3].suit })}
-              />
-            ))}
+            {deckCards.map((deck) =>
+              deck.cards.map((card) => (
+                <Card
+                  key={card.id}
+                  id={card.id}
+                  icon={card.icon}
+                  description={card.description}
+                  click={() => addCard({ ...card, suit: deck.suit })}
+                />
+              )),
+            )}
           </div>
         </Deck>
         <Table>
@@ -147,7 +123,7 @@ const Home: React.FC = () => {
         </Table>
         <Result>
           <p>{resultGame}</p>
-          {resultGame != '' && (
+          {resultGame !== '' && (
             <button onClick={() => restart()}>Zerar jogo</button>
           )}
         </Result>
