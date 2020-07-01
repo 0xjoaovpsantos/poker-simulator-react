@@ -88,7 +88,7 @@ Execute na raiz para baixar as dependências:
 Para iniciar o projeto execute na raiz:
 
 ```bash
- yarn
+ yarn start
 ```
 
 <br/>
