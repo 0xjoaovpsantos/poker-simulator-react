@@ -76,7 +76,7 @@ export function verifyHand(hand: deckCardsProps[]) {
   } else if (verifyOnePair(hand)) {
     return {
       id: 7,
-      description: 'Um Par ',
+      description: 'Um Par',
     };
   } else {
     return {
@@ -226,7 +226,8 @@ export function tieStraightFlush(
   let higherValueSecondHand = MaximumValue(secondHand, 1);
 
   if (higherValueFirstHand! > higherValueSecondHand!) return 0;
-  else return 1;
+  else if (higherValueFirstHand! < higherValueSecondHand!) return 1;
+  else return 2;
 }
 
 export function tieQuadra(

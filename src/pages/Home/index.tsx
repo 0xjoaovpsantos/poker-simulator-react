@@ -48,8 +48,10 @@ const Home: React.FC = () => {
       setResultSecondHand(resultado!.second.description);
       if (resultado!.winner == 0) {
         setResultGame('A Primeira mão venceu!');
-      } else {
+      } else if (resultado!.winner == 1) {
         setResultGame('A Segunda mão venceu!');
+      } else {
+        setResultGame('As duas mãos empataram');
       }
     }
   }
