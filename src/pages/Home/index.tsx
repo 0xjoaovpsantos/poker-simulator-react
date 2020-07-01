@@ -46,20 +46,21 @@ const Home: React.FC = () => {
         setSecondHand(secondHand.filter((card) => card.id !== cardSelected.id));
       } else {
         setSecondHand([...secondHand, cardSelected]);
+        if (secondHand.length == 4) endGame();
       }
     }
+  }
 
-    if (secondHand.length == 5) {
-      let resultado = getWinner(firstHand, secondHand);
-      setResultFirstHand(resultado!.first.description);
-      setResultSecondHand(resultado!.second.description);
-      if (resultado!.winner == 0) {
-        setResultGame('A Primeira mão venceu!');
-      } else if (resultado!.winner == 1) {
-        setResultGame('A Segunda mão venceu!');
-      } else {
-        setResultGame('As duas mãos empataram');
-      }
+  function endGame() {
+    let resultado = getWinner(firstHand, secondHand);
+    setResultFirstHand(resultado!.first.description);
+    setResultSecondHand(resultado!.second.description);
+    if (resultado!.winner == 0) {
+      setResultGame('A Primeira mão venceu!');
+    } else if (resultado!.winner == 1) {
+      setResultGame('A Segunda mão venceu!');
+    } else {
+      setResultGame('As duas mãos empataram');
     }
   }
 
