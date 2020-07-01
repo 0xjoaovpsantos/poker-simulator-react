@@ -209,7 +209,10 @@ export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
   return true;
 }
 
-export function MaximumValue(deckCards: deckCardsProps[]) {
+export function MaximumValue(
+  deckCards: deckCardsProps[],
+  numberOfRepetitions: number,
+) {
   let maximumValue = 14;
   let ocorrencias = Array(maximumValue).fill(0);
 
@@ -218,28 +221,20 @@ export function MaximumValue(deckCards: deckCardsProps[]) {
       1 + (ocorrencias[deckCards[i].value] || 0);
 
   let higherNumber = 0;
-  let numberOfRepetitions = 0;
   for (let i = 0; i < ocorrencias.length; i++)
-    if (ocorrencias[i] > numberOfRepetitions) {
-      higherNumber = i;
-      numberOfRepetitions = ocorrencias[i];
-    }
+    if (ocorrencias[i] == numberOfRepetitions) higherNumber = i;
 
-  return {
-    higherNumber,
-    numberOfRepetitions,
-  };
+  return higherNumber;
 }
 
 export function tieStraightFlush(
   firstHand: deckCardsProps[],
   secondHand: deckCardsProps[],
 ) {
-  let higherValueFirstHand = MaximumValue(firstHand);
-  let higherValueSecondHand = MaximumValue(secondHand);
+  let higherValueFirstHand = MaximumValue(firstHand, 1);
+  let higherValueSecondHand = MaximumValue(secondHand, 1);
 
-  if (higherValueFirstHand.higherNumber > higherValueSecondHand.higherNumber)
-    return 0;
+  if (higherValueFirstHand! > higherValueSecondHand!) return 0;
   else return 1;
 }
 
@@ -247,8 +242,9 @@ export function tieQuadra(
   firstHand: deckCardsProps[],
   secondHand: deckCardsProps[],
 ) {
-  let highestFirstHandCard = '';
-  let highestSecondtHandCard = '';
+  let higherValueFirstHand = MaximumValue(firstHand, 4);
+  let higherValueSecondHand = MaximumValue(secondHand, 4);
 
-  for (let i = 0; i < firstHand.length; i++) {}
+  if (higherValueFirstHand! > higherValueSecondHand!) return 0;
+  else return 1;
 }
