@@ -13,7 +13,7 @@ interface deckCardsProps {
   icon: string;
   description: string;
   naipe?: string;
-  value: string;
+  value: number;
 }
 
 const Home: React.FC = () => {

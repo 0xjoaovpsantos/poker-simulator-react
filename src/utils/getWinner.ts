@@ -5,7 +5,7 @@ interface deckCardsProps {
   icon: string;
   description: string;
   naipe?: string;
-  value: string;
+  value: number;
 }
 
 export function getWinner(
@@ -96,7 +96,7 @@ export function verifyHand(hand: deckCardsProps[]) {
 }
 
 export function verifyStraightFlush(deckCards: deckCardsProps[]): boolean {
-  if (verifySameNaipe(deckCards) && verifyNumericalOrderSameNaipe(deckCards)) {
+  if (verifySameSuit(deckCards) && verifyNumericalOrderSameNaipe(deckCards)) {
     return true;
   } else {
     return false;
@@ -123,7 +123,7 @@ export function verifyFullHouse(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifyFlush(deckCards: deckCardsProps[]): boolean {
-  if (verifySameNaipe(deckCards)) {
+  if (verifySameSuit(deckCards)) {
     return true;
   } else {
     return false;
@@ -162,7 +162,7 @@ export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
   }
 }
 
-export function verifySameNaipe(deckCards: deckCardsProps[]): boolean {
+export function verifySameSuit(deckCards: deckCardsProps[]): boolean {
   let naipe = deckCards[0].naipe;
   for (let i = 1; i < deckCards.length; i++) {
     if (deckCards[i].naipe != naipe) return false;
@@ -219,46 +219,30 @@ export function verifyCardsSameValue(
 }
 
 export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
-  for (let i = 0; i < deckCards.length; i++) {
-    if (
-      deckCards[i].value == 'A' ||
-      deckCards[i].value == 'J' ||
-      deckCards[i].value == 'Q' ||
-      deckCards[i].value == 'K'
-    ) {
-      return false;
-    }
-  }
-
   deckCards.sort(function (a, b) {
-    if (Number(a.value) > Number(b.value)) {
+    if (a.value > b.value) {
       return 1;
     }
 
-    if (Number(a.value) < Number(b.value)) {
+    if (a.value < b.value) {
       return -1;
     }
 
     return 0;
   });
 
-  if (
-    Number(deckCards[1].value) - Number(deckCards[0].value) != 1 ||
-    Number(deckCards[2].value) - Number(deckCards[1].value) != 1 ||
-    Number(deckCards[3].value) - Number(deckCards[2].value) != 1 ||
-    Number(deckCards[4].value) - Number(deckCards[3].value) != 1
-  ) {
-    return false;
-  } else {
-    return true;
+  for (let i = 0; i < deckCards.length; i++) {
+    if (deckCards[i + 1].value - deckCards[i].value != 1) return false;
   }
+
+  return true;
 }
 
 export function verifyTwoPairsCards(deckCards: deckCardsProps[]): boolean {
-  let valueCard = '';
+  let valueCard;
   let quantity;
   let quantityPairs = 0;
-  let valueFirstPair = '';
+  let valueFirstPair;
   for (let i = 0; i < deckCards.length; i++) {
     quantity = 0;
     for (let j = 0; j < deckCards.length; j++) {
@@ -286,8 +270,8 @@ export function tieStraightFlush(
   firstHand: deckCardsProps[],
   secondHand: deckCardsProps[],
 ) {
-  let highestFirstHandCard = '';
-  let highestSecondtHandCard = '';
+  let highestFirstHandCard;
+  let highestSecondtHandCard;
 
   for (let i = 0; i < firstHand.length; i++) {
     if (i == 0) {
