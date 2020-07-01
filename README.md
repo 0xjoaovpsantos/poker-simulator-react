@@ -7,23 +7,23 @@
 </a>
 
 <a href="#">
-<img alt="Linguagens" src="https://img.shields.io/github/languages/count/joaovictorpsantos/poker-react?color=004400&style=flat-square">
+<img alt="Linguagens" src="https://img.shields.io/github/languages/count/joaovictorpsantos/poker-simulator-react?color=004400&style=flat-square">
 </a>
 
-<a href="https://github.com/joaovictorpsantos/poker-react/stargazers">
-<img alt="Stars" src="https://img.shields.io/github/stars/joaovictorpsantos/poker-react?color=004400&style=flat-square">
+<a href="https://github.com/joaovictorpsantos/poker-simulator-react/stargazers">
+<img alt="Stars" src="https://img.shields.io/github/stars/joaovictorpsantos/poker-simulator-react?color=004400&style=flat-square">
 </a>
 
-<a href="https://github.com/joaovictorpsantos/poker-react/network/members">
-<img alt="Forks" src="https://img.shields.io/github/forks/joaovictorpsantos/poker-react?color=004400&style=flat-square">
+<a href="https://github.com/joaovictorpsantos/poker-simulator-react/network/members">
+<img alt="Forks" src="https://img.shields.io/github/forks/joaovictorpsantos/poker-simulator-react?color=004400&style=flat-square">
 </a>
 
 <a href="#">
-<img alt="Tamanho do código em bytes" src="https://img.shields.io/github/languages/code-size/joaovictorpsantos/poker-react?color=004400&style=flat-square">
+<img alt="Tamanho do código em bytes" src="https://img.shields.io/github/languages/code-size/joaovictorpsantos/poker-simulator-react?color=004400&style=flat-square">
 </a>
 
-<a href="https://github.com/joaovictorpsantos/poker-react/commits/master">
-<img alt="Commits" src="https://img.shields.io/github/last-commit/joaovictorpsantos/poker-react?color=004400&style=flat-square">
+<a href="https://github.com/joaovictorpsantos/poker-simulator-react/commits/master">
+<img alt="Commits" src="https://img.shields.io/github/last-commit/joaovictorpsantos/poker-simulator-react?color=004400&style=flat-square">
 </a>
 
 <br/><br/>
@@ -76,7 +76,7 @@ Para executar esse projeto em sua máquina,
 De o clone no repositório:
 
 ```bash
- git clone https://github.com/joaovictorpsantos/poker-react.git
+ git clone https://github.com/joaovictorpsantos/poker-simulator-react.git
 ```
 
 Execute na raiz para baixar as dependências:
