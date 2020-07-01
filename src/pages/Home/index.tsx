@@ -33,6 +33,13 @@ const Home: React.FC = () => {
         setFirstHand([...firstHand, cardSelected]);
       }
     } else if (secondHand.length < 5) {
+      const indexFirstHand = firstHand.findIndex(
+        (card) => card.id === cardSelected.id,
+      );
+      if (indexFirstHand != -1) {
+        alert('Essa carta já foi escolhida na primeira mão!');
+        return;
+      }
       const index = secondHand.findIndex((card) => card.id === cardSelected.id);
 
       if (index !== -1) {
