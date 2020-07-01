@@ -35,6 +35,13 @@ export function getWinner(
         first,
         second,
       };
+    } else if (first.id == 1) {
+      let winner = tieQuadra(firstHand, secondHand);
+      return {
+        winner,
+        first,
+        second,
+      };
     }
   }
 }
@@ -156,21 +163,11 @@ export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifySameNaipe(deckCards: deckCardsProps[]): boolean {
-  let naipeDeck;
-  let sameNaipe = true;
-  for (let i = 0; i < deckCards.length; i++) {
-    if (deckCards[i].naipe && i == 0) {
-      naipeDeck = deckCards[i].naipe;
-      continue;
-    }
-
-    if (i != 0 && deckCards[i].naipe != naipeDeck) {
-      sameNaipe = false;
-      return sameNaipe;
-    }
+  let naipe = deckCards[0].naipe;
+  for (let i = 1; i < deckCards.length; i++) {
+    if (deckCards[i].naipe != naipe) return false;
   }
-
-  return sameNaipe;
+  return true;
 }
 
 export function verifyNumericalOrderSameNaipe(
@@ -313,4 +310,14 @@ export function tieStraightFlush(
   } else {
     return 1;
   }
+}
+
+export function tieQuadra(
+  firstHand: deckCardsProps[],
+  secondHand: deckCardsProps[],
+) {
+  let highestFirstHandCard = '';
+  let highestSecondtHandCard = '';
+
+  for (let i = 0; i < firstHand.length; i++) {}
 }
