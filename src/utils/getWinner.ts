@@ -41,7 +41,7 @@ export function verifyHand(hand: deckCardsProps[]) {
   if (verifyStraightFlush(hand)) {
     return {
       id: 0,
-      description: 'Staight Flush',
+      description: 'Straight Flush',
     };
   } else if (verifyQuadra(hand)) {
     return {

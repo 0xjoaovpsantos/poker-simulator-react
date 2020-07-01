@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-import { Container, Deck } from './styles';
+import { Container, Deck, Table, Hand, Result } from './styles';
 
 import deckCards from '../../utils/deckCards';
 
@@ -58,7 +58,11 @@ const Home: React.FC = () => {
     <>
       <Container>
         <Deck>
-          <p> teste</p>
+          <h1>Poker Simulator with React</h1>
+          <p>
+            Escolha 5 cartas para a primeira mão e mais 5 cartas para a segunda
+            mão!!!
+          </p>
           <div>
             {deckCards[0].cards.map((copa) => (
               <Card
@@ -68,8 +72,7 @@ const Home: React.FC = () => {
                 click={() => addCard({ ...copa, suit: deckCards[0].suit })}
               />
             ))}
-          </div>
-          <div>
+
             {deckCards[1].cards.map((espada) => (
               <Card
                 id={espada.id}
@@ -78,8 +81,7 @@ const Home: React.FC = () => {
                 click={() => addCard({ ...espada, suit: deckCards[1].suit })}
               />
             ))}
-          </div>
-          <div>
+
             {deckCards[2].cards.map((ouro) => (
               <Card
                 id={ouro.id}
@@ -88,8 +90,7 @@ const Home: React.FC = () => {
                 click={() => addCard({ ...ouro, suit: deckCards[2].suit })}
               />
             ))}
-          </div>
-          <div>
+
             {deckCards[3].cards.map((pau) => (
               <Card
                 id={pau.id}
@@ -100,29 +101,35 @@ const Home: React.FC = () => {
             ))}
           </div>
         </Deck>
-        <div>
-          {firstHand.map((card) => (
-            <Card
-              id={card.id}
-              icon={card.icon}
-              description={card.description}
-              click={() => {}}
-            />
-          ))}
-          {<p>{resultFirstHand}</p>}
-        </div>
-        <div>
-          {secondHand.map((card) => (
-            <Card
-              id={card.id}
-              icon={card.icon}
-              description={card.description}
-              click={() => {}}
-            />
-          ))}
-          {<p>{resultSecondHand}</p>}
-        </div>
-        <div>{resultGame}</div>
+        <Table>
+          <Hand>
+            <h3>Primeiro Mão</h3>
+            {firstHand.map((card) => (
+              <Card
+                id={card.id}
+                icon={card.icon}
+                description={card.description}
+                click={() => {}}
+              />
+            ))}
+            {<p>{resultFirstHand}</p>}
+          </Hand>
+          <Hand>
+            <h3>Segunda Mão</h3>
+            {secondHand.map((card) => (
+              <Card
+                id={card.id}
+                icon={card.icon}
+                description={card.description}
+                click={() => {}}
+              />
+            ))}
+            {<p>{resultSecondHand}</p>}
+          </Hand>
+        </Table>
+        <Result>
+          <p>{resultGame}</p>
+        </Result>
       </Container>
     </>
   );

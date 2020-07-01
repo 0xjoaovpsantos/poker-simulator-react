@@ -10,10 +10,8 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-  const [isFocused, setIsFocused] = useState(false);
-
   return (
-    <Container isFocused={isFocused}>
+    <Container>
       <img
         src={props.icon}
         alt={props.description}

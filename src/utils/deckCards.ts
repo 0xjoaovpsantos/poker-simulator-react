@@ -41,7 +41,7 @@ import ouros_q from '../assets/ouros/ouros_q.png';
 import ouros_k from '../assets/ouros/ouros_k.png';
 
 import paus_a from '../assets/paus/paus_a.png';
-import paus_2 from '../assets/paus/paus_2.png';
+import paus_2 from '../assets/paus_2.png';
 import paus_3 from '../assets/paus/paus_3.png';
 import paus_4 from '../assets/paus/paus_4.png';
 import paus_5 from '../assets/paus/paus_5.png';

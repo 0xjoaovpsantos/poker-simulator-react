@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import imgBackground from '../assets/background.png';
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -8,6 +10,8 @@ export default createGlobalStyle`
   }
 
   body{
-    background-color: #004400;
+    background: url(${imgBackground});
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
   }
 `;

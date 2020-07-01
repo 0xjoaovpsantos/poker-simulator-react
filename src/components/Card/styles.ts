@@ -1,24 +1,11 @@
 import styled, { css } from 'styled-components';
 
-interface ContainerProps {
-  isFocused: boolean;
-}
-
-export const Container = styled.span<ContainerProps>`
-  border-width: 0px;
-  border-style: none;
-  margin: 0 10px;
+export const Container = styled.span`
+  margin: 10px;
 
   img {
-    transition: all 0.2s;
+    width: 80px;
+    height: 100px;
+    margin: 10px 0px;
   }
-
-  ${(props) =>
-    props.isFocused &&
-    css`
-      img {
-        /*transform: translateY(-20px);
-        transition: all 0.2s;*/
-      }
-    `}
 `;
