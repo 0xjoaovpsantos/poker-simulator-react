@@ -147,7 +147,7 @@ export function verifyTrinca(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifyTwoPairs(deckCards: deckCardsProps[]): boolean {
-  if (verifyTwoPairsCards(deckCards)) {
+  if (verifyCardsSameValue(deckCards, 2, 2)) {
     return true;
   } else {
     return false;
@@ -207,34 +207,6 @@ export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
   }
 
   return true;
-}
-
-export function verifyTwoPairsCards(deckCards: deckCardsProps[]): boolean {
-  let valueCard;
-  let quantity;
-  let quantityPairs = 0;
-  let valueFirstPair;
-  for (let i = 0; i < deckCards.length; i++) {
-    quantity = 0;
-    for (let j = 0; j < deckCards.length; j++) {
-      if (deckCards[i].value == deckCards[j].value) {
-        quantity++;
-        valueCard = deckCards[i].value;
-      }
-    }
-    if (quantity == 2) {
-      if (quantityPairs == 0) {
-        quantityPairs++;
-        valueFirstPair = valueCard;
-      } else if (valueCard != valueFirstPair) {
-        quantityPairs++;
-      }
-      if (quantityPairs == 2) {
-        return true;
-      }
-    }
-  }
-  return false;
 }
 
 export function tieStraightFlush(
