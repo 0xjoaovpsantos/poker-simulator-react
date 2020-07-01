@@ -79,7 +79,13 @@ De o clone no repositório:
  git clone https://github.com/joaovictorpsantos/poker-react.git
 ```
 
-Execute no terminal para baixar as dependências:
+Execute na raiz para baixar as dependências:
+
+```bash
+ yarn
+```
+
+Para iniciar o projeto execute na raiz:
 
 ```bash
  yarn
