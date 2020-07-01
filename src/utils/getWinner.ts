@@ -202,7 +202,7 @@ export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
     return 0;
   });
 
-  for (let i = 0; i < deckCards.length; i++) {
+  for (let i = 0; i < deckCards.length - 1; i++) {
     if (deckCards[i + 1].value - deckCards[i].value != 1) return false;
   }
 

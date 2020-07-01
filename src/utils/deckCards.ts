@@ -6,11 +6,11 @@ import copas_5 from '../assets/copas/copas_5.png';
 import copas_6 from '../assets/copas/copas_6.png';
 import copas_7 from '../assets/copas/copas_7.png';
 import copas_8 from '../assets/copas/copas_8.png';
-import copas_9 from '../assets/copas/copas_a.png';
+import copas_9 from '../assets/copas/copas_9.png';
 import copas_10 from '../assets/copas/copas_10.png';
 import copas_j from '../assets/copas/copas_j.png';
-import copas_q from '../assets/copas/copas_k.png';
-import copas_k from '../assets/copas/copas_a.png';
+import copas_q from '../assets/copas/copas_q.png';
+import copas_k from '../assets/copas/copas_k.png';
 
 import espadas_a from '../assets/espadas/espadas_a.png';
 import espadas_2 from '../assets/espadas/espadas_2.png';
@@ -20,11 +20,11 @@ import espadas_5 from '../assets/espadas/espadas_5.png';
 import espadas_6 from '../assets/espadas/espadas_6.png';
 import espadas_7 from '../assets/espadas/espadas_7.png';
 import espadas_8 from '../assets/espadas/espadas_8.png';
-import espadas_9 from '../assets/espadas/espadas_a.png';
+import espadas_9 from '../assets/espadas/espadas_9.png';
 import espadas_10 from '../assets/espadas/espadas_10.png';
 import espadas_j from '../assets/espadas/espadas_j.png';
-import espadas_q from '../assets/espadas/espadas_k.png';
-import espadas_k from '../assets/espadas/espadas_a.png';
+import espadas_q from '../assets/espadas/espadas_q.png';
+import espadas_k from '../assets/espadas/espadas_k.png';
 
 import ouros_a from '../assets/ouros/ouros_a.png';
 import ouros_2 from '../assets/ouros/ouros_2.png';
@@ -34,11 +34,11 @@ import ouros_5 from '../assets/ouros/ouros_5.png';
 import ouros_6 from '../assets/ouros/ouros_6.png';
 import ouros_7 from '../assets/ouros/ouros_7.png';
 import ouros_8 from '../assets/ouros/ouros_8.png';
-import ouros_9 from '../assets/ouros/ouros_a.png';
+import ouros_9 from '../assets/ouros/ouros_9.png';
 import ouros_10 from '../assets/ouros/ouros_10.png';
 import ouros_j from '../assets/ouros/ouros_j.png';
-import ouros_q from '../assets/ouros/ouros_k.png';
-import ouros_k from '../assets/ouros/ouros_a.png';
+import ouros_q from '../assets/ouros/ouros_q.png';
+import ouros_k from '../assets/ouros/ouros_k.png';
 
 import paus_a from '../assets/paus/paus_a.png';
 import paus_2 from '../assets/paus/paus_2.png';
@@ -48,11 +48,11 @@ import paus_5 from '../assets/paus/paus_5.png';
 import paus_6 from '../assets/paus/paus_6.png';
 import paus_7 from '../assets/paus/paus_7.png';
 import paus_8 from '../assets/paus/paus_8.png';
-import paus_9 from '../assets/paus/paus_a.png';
+import paus_9 from '../assets/paus/paus_9.png';
 import paus_10 from '../assets/paus/paus_10.png';
 import paus_j from '../assets/paus/paus_j.png';
-import paus_q from '../assets/paus/paus_k.png';
-import paus_k from '../assets/paus/paus_a.png';
+import paus_q from '../assets/paus/paus_q.png';
+import paus_k from '../assets/paus/paus_k.png';
 
 export default [
   {
