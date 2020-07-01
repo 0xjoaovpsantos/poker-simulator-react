@@ -42,7 +42,7 @@ const Home: React.FC = () => {
       }
     }
 
-    if (secondHand.length == 4) {
+    if (secondHand.length == 5) {
       let resultado = getWinner(firstHand, secondHand);
       setResultFirstHand(resultado!.first.description);
       setResultSecondHand(resultado!.second.description);

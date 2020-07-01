@@ -27,6 +27,15 @@ export function getWinner(
       first,
       second,
     };
+  } else {
+    if (first.id == 0) {
+      let winner = tieStraightFlush(firstHand, secondHand);
+      return {
+        winner,
+        first,
+        second,
+      };
+    }
   }
 }
 
@@ -178,14 +187,13 @@ export function verifyNumericalOrderSameNaipe(
 
     return 0;
   });
-
+  console.log(deckCards);
   if (
     deckCards[1].id - deckCards[0].id != 1 ||
     deckCards[2].id - deckCards[1].id != 1 ||
     deckCards[3].id - deckCards[2].id != 1 ||
     deckCards[4].id - deckCards[3].id != 1
   ) {
-    console.log(deckCards);
     return false;
   } else {
     return true;
@@ -275,4 +283,34 @@ export function verifyTwoPairsCards(deckCards: deckCardsProps[]): boolean {
     }
   }
   return false;
+}
+
+export function tieStraightFlush(
+  firstHand: deckCardsProps[],
+  secondHand: deckCardsProps[],
+) {
+  let highestFirstHandCard = '';
+  let highestSecondtHandCard = '';
+
+  for (let i = 0; i < firstHand.length; i++) {
+    if (i == 0) {
+      highestFirstHandCard = firstHand[i].value;
+      highestSecondtHandCard = secondHand[i].value;
+      continue;
+    }
+
+    if (Number(firstHand[i].value) > Number(highestFirstHandCard)) {
+      highestFirstHandCard = firstHand[i].value;
+    }
+
+    if (Number(secondHand[i].value) > Number(highestSecondtHandCard)) {
+      highestSecondtHandCard = secondHand[i].value;
+    }
+  }
+
+  if (Number(highestFirstHandCard) > Number(highestSecondtHandCard)) {
+    return 0;
+  } else {
+    return 1;
+  }
 }
