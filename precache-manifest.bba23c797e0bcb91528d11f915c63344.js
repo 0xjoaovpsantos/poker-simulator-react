@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "181063046c2c8331291da2eeb1d42e71",
+    "revision": "0478faaa3b857132dcbaf25703c6a370",
     "url": "/poker-simulator-react/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f02f97db28f376edd95",
-    "url": "/poker-simulator-react/static/js/main.d913de05.chunk.js"
+    "revision": "f1ad0ccdf849343a5d5b",
+    "url": "/poker-simulator-react/static/js/main.eea7e661.chunk.js"
   },
   {
     "revision": "7db912740c4d3d0129c0",
