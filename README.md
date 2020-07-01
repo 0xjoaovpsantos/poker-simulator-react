@@ -1,6 +1,6 @@
 # Poker Simulator With React
 
-> Simulador de Poker feito com React, TypeScript e StyledComponents, para acessar <a href=""> clique aqui. </a>
+> Simulador de Poker feito com React, TypeScript e StyledComponents, para acessar <a href="https://joaovictorpsantos.github.io/poker-simulator-react/"> clique aqui. </a>
 
 <a href="https://github.com/joaovictorpsantos">
 <img alt="Autor" src="https://img.shields.io/badge/autor-JoãoVictorPereiraSantos-004400?style=flat-square">
@@ -40,7 +40,7 @@
 
 ## 💡 Sobre o projeto:
 
-Este projeto faz parte de um desafio que consistia em desenvolver em 2 dias uma aplicação que permitisse ao usuário entrasse com duas mãos de cartas de poker e a aplicação retornasse o resultado. Sobre a parte técnica do desafio poderia ser de acordo com a escolha do desenvolvedor, poderia ser um site, um app, uma api rest, o intuito era mostrar o conhecimento, eu escolhi o React junto com o TypeScript para o desafio por ser a stack que atualmente estou estudando e também por ser a stack usada para a vaga referente a esse desafio. Para poder ver a aplicação online <a href=""> clique aqui. </a>
+Este projeto faz parte de um desafio que consistia em desenvolver em 2 dias uma aplicação que permitisse ao usuário entrasse com duas mãos de cartas de poker e a aplicação retornasse o resultado. Sobre a parte técnica do desafio poderia ser de acordo com a escolha do desenvolvedor, poderia ser um site, um app, uma api rest, o intuito era mostrar o conhecimento, eu escolhi o React junto com o TypeScript para o desafio por ser a stack que atualmente estou estudando e também por ser a stack usada para a vaga referente a esse desafio. Para poder ver a aplicação online <a href="https://joaovictorpsantos.github.io/poker-simulator-react/"> clique aqui. </a>
 
 ## 🔥 Quais são as funcionalidades?
 
