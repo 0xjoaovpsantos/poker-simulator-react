@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/poker-simulator-react/static/js/main.d913de05.chunk.js",
+    "main.js.map": "/poker-simulator-react/static/js/main.d913de05.chunk.js.map",
+    "runtime-main.js": "/poker-simulator-react/static/js/runtime-main.6550f7a9.js",
+    "runtime-main.js.map": "/poker-simulator-react/static/js/runtime-main.6550f7a9.js.map",
+    "static/js/2.d34cb2d9.chunk.js": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js",
+    "static/js/2.d34cb2d9.chunk.js.map": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.map",
+    "index.html": "/poker-simulator-react/index.html",
+    "precache-manifest.3b1889b1545208aa496a0dcc283817cd.js": "/poker-simulator-react/precache-manifest.3b1889b1545208aa496a0dcc283817cd.js",
+    "service-worker.js": "/poker-simulator-react/service-worker.js",
+    "static/js/2.d34cb2d9.chunk.js.LICENSE.txt": "/poker-simulator-react/static/js/2.d34cb2d9.chunk.js.LICENSE.txt",
+    "static/media/background.png": "/poker-simulator-react/static/media/background.981ff59c.png",
+    "static/media/paus_2.png": "/poker-simulator-react/static/media/paus_2.12aee8a9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6550f7a9.js",
+    "static/js/2.d34cb2d9.chunk.js",
+    "static/js/main.d913de05.chunk.js"
+  ]
+}
