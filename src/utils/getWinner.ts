@@ -37,7 +37,9 @@ export function getWinner(
   };
 }
 
-export function verifyHand(hand: deckCardsProps[]) {
+export function verifyHand(cardDeck: deckCardsProps[]) {
+  let hand = verifyAsValue(cardDeck);
+
   if (verifyStraightFlush(hand)) {
     return {
       id: 0,
@@ -257,4 +259,17 @@ export function tieFullHouse(
     if (higherValueFirstHand! > higherValueSecondHand!) return 0;
     else return 1;
   }
+}
+
+export function verifyAsValue(deckCards: deckCardsProps[]) {
+  let higherValue = -1;
+  for (let i = 0; i < deckCards.length; i++)
+    if (deckCards[i].value > higherValue && deckCards[i].value != 14)
+      higherValue = deckCards[i].value;
+
+  if (higherValue == 5)
+    for (let i = 0; i < deckCards.length; i++)
+      if (deckCards[i].value == 14) deckCards[i].value = 1;
+
+  return deckCards;
 }
