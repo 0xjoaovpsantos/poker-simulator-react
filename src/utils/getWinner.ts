@@ -64,12 +64,12 @@ export function verifyHand(hand: deckCardsProps[]) {
   } else if (verifyTwoPairs(hand)) {
     return {
       id: 6,
-      description: 'Quadra',
+      description: 'Dois Pares',
     };
   } else if (verifyOnePair(hand)) {
     return {
       id: 7,
-      description: 'Quadra',
+      description: 'Um Par ',
     };
   } else {
     return {
