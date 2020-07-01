@@ -104,7 +104,7 @@ export function verifyStraightFlush(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifyQuadra(deckCards: deckCardsProps[]): boolean {
-  if (verifyCardsSameValue(deckCards, 4)) {
+  if (verifyCardsSameValue(deckCards, 1, 4)) {
     return true;
   } else {
     return false;
@@ -113,8 +113,8 @@ export function verifyQuadra(deckCards: deckCardsProps[]): boolean {
 
 export function verifyFullHouse(deckCards: deckCardsProps[]): boolean {
   if (
-    verifyCardsSameValue(deckCards, 3) &&
-    verifyCardsSameValue(deckCards, 2)
+    verifyCardsSameValue(deckCards, 1, 3) &&
+    verifyCardsSameValue(deckCards, 1, 2)
   ) {
     return true;
   } else {
@@ -139,7 +139,7 @@ export function verifySequence(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifyTrinca(deckCards: deckCardsProps[]): boolean {
-  if (verifyCardsSameValue(deckCards, 3)) {
+  if (verifyCardsSameValue(deckCards, 1, 3)) {
     return true;
   } else {
     return false;
@@ -155,7 +155,7 @@ export function verifyTwoPairs(deckCards: deckCardsProps[]): boolean {
 }
 
 export function verifyOnePair(deckCards: deckCardsProps[]): boolean {
-  if (verifyCardsSameValue(deckCards, 2)) {
+  if (verifyCardsSameValue(deckCards, 1, 2)) {
     return true;
   } else {
     return false;
@@ -172,23 +172,21 @@ export function verifySameSuit(deckCards: deckCardsProps[]): boolean {
 
 export function verifyCardsSameValue(
   deckCards: deckCardsProps[],
-  quantitySame: number,
+  quantityOfCards: number,
+  numberOfRepetitions: number,
 ): boolean {
-  let valueCard;
-  let quantity;
-  for (let i = 0; i < deckCards.length; i++) {
-    quantity = 0;
-    for (let j = 0; j < deckCards.length; j++) {
-      if (deckCards[i].value == deckCards[j].value) {
-        quantity++;
-        valueCard = deckCards[i].value;
-      }
-    }
-    if (quantity == quantitySame) {
-      return true;
-    }
-  }
-  return false;
+  let maximumValue = 14;
+  let ocorrencias = Array(maximumValue).fill(0);
+
+  for (let i = 0; i < deckCards.length; i++)
+    ocorrencias[deckCards[i].value] =
+      1 + (ocorrencias[deckCards[i].value] || 0);
+
+  for (let i = 0; i < ocorrencias.length; i++)
+    if (ocorrencias[i] == numberOfRepetitions) quantityOfCards--;
+
+  if (quantityOfCards == 0) return true;
+  else return false;
 }
 
 export function verifyNumericalOrder(deckCards: deckCardsProps[]): boolean {
