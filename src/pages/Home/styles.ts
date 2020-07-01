@@ -69,4 +69,15 @@ export const Result = styled.div`
   border-width: 2px;
   border-radius: 10px;
   font-weight: 700;
+
+  button {
+    padding: 10px;
+    margin-left: 20px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #004400;
+  }
 `;

@@ -63,6 +63,14 @@ const Home: React.FC = () => {
     }
   }
 
+  function restart() {
+    setFirstHand([]);
+    setSecondHand([]);
+    setResultFirstHand('');
+    setResultSecondHand('');
+    setResultGame('');
+  }
+
   return (
     <>
       <Container>
@@ -138,6 +146,9 @@ const Home: React.FC = () => {
         </Table>
         <Result>
           <p>{resultGame}</p>
+          {resultGame != '' && (
+            <button onClick={() => restart()}>Zerar jogo</button>
+          )}
         </Result>
       </Container>
     </>
