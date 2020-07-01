@@ -19,6 +19,9 @@ interface deckCardsProps {
 const Home: React.FC = () => {
   const [firstHand, setFirstHand] = useState<deckCardsProps[]>([]);
   const [secondHand, setSecondHand] = useState<deckCardsProps[]>([]);
+  const [resultFirstHand, setResultFirstHand] = useState('');
+  const [resultSecondHand, setResultSecondHand] = useState('');
+  const [resultGame, setResultGame] = useState('');
 
   function addCard(cardSelected: deckCardsProps) {
     if (firstHand.length < 5) {
@@ -37,8 +40,17 @@ const Home: React.FC = () => {
       } else {
         setSecondHand([...secondHand, cardSelected]);
       }
-    } else {
-      getWinner(firstHand, secondHand);
+    }
+
+    if (secondHand.length == 4) {
+      let resultado = getWinner(firstHand, secondHand);
+      setResultFirstHand(resultado!.first.description);
+      setResultSecondHand(resultado!.second.description);
+      if (resultado!.winner == 0) {
+        setResultGame('A Primeira mão venceu!');
+      } else {
+        setResultGame('A Segunda mão venceu!');
+      }
     }
   }
 
@@ -97,6 +109,7 @@ const Home: React.FC = () => {
               click={() => {}}
             />
           ))}
+          {<p>{resultFirstHand}</p>}
         </div>
         <div>
           {secondHand.map((card) => (
@@ -107,7 +120,9 @@ const Home: React.FC = () => {
               click={() => {}}
             />
           ))}
+          {<p>{resultSecondHand}</p>}
         </div>
+        <div>{resultGame}</div>
       </Container>
     </>
   );

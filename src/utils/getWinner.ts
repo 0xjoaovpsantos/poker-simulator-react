@@ -12,24 +12,70 @@ export function getWinner(
   firstHand: deckCardsProps[],
   secondHand: deckCardsProps[],
 ) {
-  if (verifyStraightFlush(firstHand)) {
-    alert('primeira mao staright flush');
-  } else if (verifyQuadra(firstHand)) {
-    alert('primeira mao quadra');
-  } else if (verifyFullHouse(firstHand)) {
-    alert('primeira mao full house');
-  } else if (verifyFlush(firstHand)) {
-    alert('primeira mao flush');
-  } else if (verifySequence(firstHand)) {
-    alert('primeira mao sequencia');
-  } else if (verifyTrinca(firstHand)) {
-    alert('primeira mao trinca');
-  } else if (verifyTwoPairs(firstHand)) {
-    alert('primeira mao two pairs');
-  } else if (verifyOnePair(firstHand)) {
-    alert('primeira mao one pair');
+  let first = verifyHand(firstHand);
+  let second = verifyHand(secondHand);
+
+  if (first.id < second.id) {
+    return {
+      winner: 0,
+      first,
+      second,
+    };
+  } else if (first.id > second.id) {
+    return {
+      winner: 1,
+      first,
+      second,
+    };
+  }
+}
+
+export function verifyHand(hand: deckCardsProps[]) {
+  if (verifyStraightFlush(hand)) {
+    return {
+      id: 0,
+      description: 'Staight Flush',
+    };
+  } else if (verifyQuadra(hand)) {
+    return {
+      id: 1,
+      description: 'Quadra',
+    };
+  } else if (verifyFullHouse(hand)) {
+    return {
+      id: 2,
+      description: 'Full House',
+    };
+  } else if (verifyFlush(hand)) {
+    return {
+      id: 3,
+      description: 'Flush',
+    };
+  } else if (verifySequence(hand)) {
+    return {
+      id: 4,
+      description: 'Sequência',
+    };
+  } else if (verifyTrinca(hand)) {
+    return {
+      id: 5,
+      description: 'Trinca',
+    };
+  } else if (verifyTwoPairs(hand)) {
+    return {
+      id: 6,
+      description: 'Quadra',
+    };
+  } else if (verifyOnePair(hand)) {
+    return {
+      id: 7,
+      description: 'Quadra',
+    };
   } else {
-    alert('high letter');
+    return {
+      id: 8,
+      description: 'Carta Alta',
+    };
   }
 }
 
